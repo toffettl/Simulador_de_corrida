@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulador de corrida", "Simulador de corrida\Simulador de corrida.csproj", "{21036C43-CF6B-4937-BDF9-681E4A1FCAF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21036C43-CF6B-4937-BDF9-681E4A1FCAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21036C43-CF6B-4937-BDF9-681E4A1FCAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21036C43-CF6B-4937-BDF9-681E4A1FCAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21036C43-CF6B-4937-BDF9-681E4A1FCAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E05ADD2-D63E-4DF2-B22B-9FF9850DF098}
+	EndGlobalSection
+EndGlobal
