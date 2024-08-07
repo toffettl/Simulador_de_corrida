@@ -9,15 +9,19 @@ namespace Simulador_de_corrida
 {
     internal class Aposta
     {
-        public int Cavalo;
+        public int Cachorro;
+        public int Valor;
+        public Pessoa Apostador;
         public string PegarDesc()
         {
-
+            if(Apostador.Carteira >= Apostador.MinhaAposta.Valor)
+                this.Apostador.MeuLabel.Text = this.Apostador.Nome + " apostou" + Valor + " reais no cachorro número" + Cachorro;
+                return Apostador.MeuLabel.Text;
         }
 
         public int Pagar(int Vencedor)
         {
-
+            return Valor;
         }
     }
 }
