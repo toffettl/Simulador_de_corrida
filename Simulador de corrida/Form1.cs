@@ -39,9 +39,9 @@ namespace Simulador_de_corrida
             Cachorro3.MypictureBox = img3;
             Cachorro4.MypictureBox = img4;
 
-            PessoaJoao = new Pessoa() { Nome = "João", Carteira = 50, MeuLabel = label5, MeuradioButton = radioButton1 };
-            PessoaBeto = new Pessoa() { Nome = "Beto", Carteira = 75, MeuLabel = label6, MeuradioButton = radioButton2 };
-            PessoaAlfredo = new Pessoa() { Nome = "Alfredo", Carteira = 45, MeuLabel = label7, MeuradioButton = radioButton3 };
+            PessoaJoao = new Pessoa() { Nome = "João", Carteira = 50, MeuLabel = label5, MeuradioButton = checked1 };
+            PessoaBeto = new Pessoa() { Nome = "Beto", Carteira = 75, MeuLabel = label6, MeuradioButton = checked2 };
+            PessoaAlfredo = new Pessoa() { Nome = "Alfredo", Carteira = 45, MeuLabel = label7, MeuradioButton = checked3 };
 
             ApJoao = new Aposta();
             ApBeto = new Aposta();
@@ -67,43 +67,61 @@ namespace Simulador_de_corrida
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked = true)
+            if (checked1.Checked == true)
             {
                 ApJoao.Valor = Convert.ToInt32(numericUpDown1.Value);
                 ApJoao.Cachorro = Convert.ToInt32(numericUpDown2.Value);
                 if (PessoaJoao.Carteira >= ApJoao.Valor)
                 {
                     aposta1 = true;
-                    radioButton1.Enabled = false;
-                    radioButton1.Checked = false;
+                    checked1.Enabled = false;
+                    checked1.Checked = false;
                     ApJoao.PegarDesc();
                     PessoaJoao.Carteira -= ApJoao.Valor;
                     PessoaJoao.AtualizarLabel();
                 }
                 else
                 {
-                    MessageBox.Show("Você não tem dinheiro o bastante para a aposta", "Alerta");
+                    MessageBox.Show("Você não tem dinheiro o suficiente", "Alerta");
                     ApJoao.Valor = 0;
                 }
             }
-
-            if (radioButton2.Checked = true)
+            if (checked2.Checked == true)
             {
                 ApBeto.Valor = Convert.ToInt32(numericUpDown1.Value);
                 ApBeto.Cachorro = Convert.ToInt32(numericUpDown2.Value);
                 if (PessoaBeto.Carteira >= ApBeto.Valor)
                 {
                     aposta2 = true;
-                    radioButton2.Enabled = false;
-                    radioButton2.Checked = false;
+                    checked2.Enabled = false;
+                    checked2.Checked = false;
                     ApBeto.PegarDesc();
                     PessoaBeto.Carteira -= ApBeto.Valor;
                     PessoaBeto.AtualizarLabel();
                 }
                 else
                 {
-                    MessageBox.Show("Você não tem dinheiro o bastante para a aposta", "Alerta");
+                    MessageBox.Show("Você não tem dinheiro o suficiente", "Alerta");
                     ApBeto.Valor = 0;
+                }
+            }
+            if (checked3.Checked == true)
+            {
+                ApAlfredo.Valor = Convert.ToInt32(numericUpDown1.Value);
+                ApAlfredo.Cachorro = Convert.ToInt32(numericUpDown2.Value);
+                if (PessoaAlfredo.Carteira >= ApAlfredo.Valor)
+                {
+                    aposta3 = true;
+                    checked3.Enabled = false;
+                    checked3.Checked = false;
+                    ApAlfredo.PegarDesc();
+                    PessoaAlfredo.Carteira -= ApAlfredo.Valor;
+                    PessoaAlfredo.AtualizarLabel();
+                }
+                else
+                {
+                    MessageBox.Show("Você não tem dinheiro o suficiente", "Alerta");
+                    ApAlfredo.Valor = 0;
                 }
             }
         } 
@@ -115,13 +133,13 @@ namespace Simulador_de_corrida
             button1.Enabled = false;
             button2.Enabled = false;
 
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
+            checked1.Checked = false;
+            checked2.Checked = false;
+            checked3.Checked = false;
 
-            radioButton1.Enabled = false;
-            radioButton2.Enabled = false;
-            radioButton3.Enabled = false;
+            checked1.Enabled = false;
+            checked2.Enabled = false;
+            checked3.Enabled = false;
 
             while (Cachorro1.Correr() == false && Cachorro2.Correr() == false && Cachorro3.Correr() == false && Cachorro4.Correr() == false)
             {
@@ -222,13 +240,13 @@ namespace Simulador_de_corrida
             Cachorro3.VoltarInicio();
             Cachorro4.VoltarInicio();
 
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
+            checked1.Checked = false;
+            checked2.Checked = false;
+            checked3.Checked = false;
 
-            radioButton1.Enabled = true;
-            radioButton2.Enabled = true;
-            radioButton3.Enabled = true;
+            checked1.Enabled = true;
+            checked2.Enabled = true;
+            checked3.Enabled = true;
 
             aposta1 = false;
             aposta2 = false;
