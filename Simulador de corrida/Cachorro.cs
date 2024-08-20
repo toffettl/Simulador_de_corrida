@@ -46,6 +46,6 @@ namespace Simulador_de_corrida
             p.X = LocalInicial;
             this.MypictureBox.Location = p;
         }
-        ///
+        ///.
     }
 }
