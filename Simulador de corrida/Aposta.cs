@@ -15,7 +15,7 @@ namespace Simulador_de_corrida
         public string PegarDesc()
         {
             if(Apostador.Carteira >= Apostador.MinhaAposta.Valor)
-                this.Apostador.MeuLabel.Text = this.Apostador.Nome + " apostou" + Valor + " reais no cachorro número" + Cachorro;
+                this.Apostador.MeuLabel.Text = this.Apostador.Nome + " apostou " + Valor + " reais no cachorro número " + Cachorro;
                 return Apostador.MeuLabel.Text;
         }
 

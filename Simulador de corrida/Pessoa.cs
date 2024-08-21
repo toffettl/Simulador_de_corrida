@@ -41,7 +41,7 @@ namespace Simulador_de_corrida
 
         public void Coletar(int Vencedor)
         {
-            MessageBox.Show("O cachorro vencedor é o número " + Vencedor, "Cachorro Vencedor");
+            MessageBox.Show("O cachorro vencedor é o número " + Vencedor, " Cachorro Vencedor");
         }
     }
 }
